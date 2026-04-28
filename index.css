@@ -1,0 +1,274 @@
+/* Simple CSS for beginner-friendly layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #f5f7fa;
+}
+
+.container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: #0b1f3a;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.hero {
+  background: #0b1f3a;
+  color: #fff;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.hero h1 {
+  font-size: 36px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 18px;
+  color: #e6e6e6;
+}
+
+button,
+.btn-primary,
+.btn-secondary {
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #f4b400;
+  color: #0b1f3a;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #0b1f3a;
+  border: 1px solid #0b1f3a;
+}
+
+.section {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.section-alt {
+  background: #eef2f7;
+}
+
+.section-title {
+  font-size: 32px;
+  color: #0b1f3a;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  color: #555;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+
+.about-content,
+.services-grid,
+.portfolio-grid,
+.stats-grid,
+.testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-text,
+.about-image,
+.service-card,
+.portfolio-item,
+.stat-box,
+.testimonial-card {
+  flex: 1 1 280px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.about-image {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eceff3;
+  color: #555;
+}
+
+.service-card,
+.portfolio-item,
+.testimonial-card {
+  border: 1px solid #ddd;
+}
+
+.service-card h3,
+.portfolio-item h3,
+.testimonial-card .client-name {
+  color: #0b1f3a;
+}
+
+.portfolio-image {
+  min-height: 180px;
+  background: #eef2f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #555;
+  border-radius: 10px 10px 0 0;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 36px;
+  color: #f4b400;
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+footer {
+  background: #0b1f3a;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+
+.footer-section h4 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.footer-section p,
+.footer-section a {
+  color: #dfe6f3;
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin: 8px 0;
+}
+
+.footer-bottom {
+  color: #b0c4de;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .navbar-content,
+  .hero,
+  .about-content,
+  .services-grid,
+  .portfolio-grid,
+  .stats-grid,
+  .testimonials-grid,
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
