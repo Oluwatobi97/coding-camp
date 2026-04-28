@@ -24,8 +24,16 @@
           <nav class="nav-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
+            <a href="#services">Services</a>
             <a href="#contact">Contact</a>
           </nav>
+
+          <!-- Hamburger Menu Button -->
+          <button class="hamburger-menu" id="hamburgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
           <!-- CTA Button -->
           <button class="btn-primary">Get Started</button>
@@ -389,6 +397,24 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="glowpeak-script.js"></script>
+    <script>
+      // Hamburger Menu Toggle
+      const hamburgerMenu = document.getElementById('hamburgerMenu');
+      const navLinks = document.querySelector('.nav-links');
+
+      hamburgerMenu.addEventListener('click', function() {
+        hamburgerMenu.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+
+      // Close menu when a link is clicked
+      const navItems = document.querySelectorAll('.nav-links a');
+      navItems.forEach(item => {
+        item.addEventListener('click', function() {
+          hamburgerMenu.classList.remove('active');
+          navLinks.classList.remove('active');
+        });
+      });
+    </script>
   </body>
 </html>
